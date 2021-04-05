@@ -1,5 +1,3 @@
-package com.v2maestros.socketserver;
-
 import java.io.*;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
@@ -17,7 +15,7 @@ public class socketserver {
 	    PrintStream os;
 	    Socket clientSocket = null;
 	    
-    	Path path = FileSystems.getDefault().getPath("/Users/jlyang/Documents/Intern&Job/Spark_Python_Do_Big_Data_Analytics", "streamingtweets.txt");
+    	Path path = Paths.get("streamingtweets.txt");
 	    List<String> lines = null;
 		try {
 			lines = Files.readAllLines(path,StandardCharsets.UTF_8);
